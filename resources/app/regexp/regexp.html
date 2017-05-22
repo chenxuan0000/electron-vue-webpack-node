@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: lightblue;
+        }
+
+        webview {
+            display: inline-flex;
+            width: 100%;
+            height: calc(100vh - 36px);
+        }
+
+        webview.hide {
+            flex: 0 1;
+            width: 0px;
+            height: 0px;
+        }
+        .indicator {
+            position: absolute;
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+            font-size: 24px;
+            top: 50px;
+            left: 100px;
+        }
+    </style>
+    <title>regexp页面</title>
+</head>
+
+<body>
+    <a href="../menu/menu.html" class="backMenu"><img src="../component/back.png" alt=""></a>
+    <webview id="foo" src="https://regexper.com/"></webview>
+    <p class="indicator"></p>
+</body>
+<script>
+    onload = () => {
+        const webview = document.getElementById('foo')
+        const indicator = document.querySelector('.indicator')
+
+        const loadstart = () => {
+            indicator.innerText = 'loading...'
+        }
+
+        const loadstop = () => {
+            indicator.innerText = ''
+        }
+
+        webview.addEventListener('did-start-loading', loadstart)
+        webview.addEventListener('did-stop-loading', loadstop)
+    }
+</script>
+
+</html>

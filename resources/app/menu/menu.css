@@ -1,0 +1,186 @@
+/*
+ * @Author: chenxuan 
+ * @Date: 2017-05-20 23:51:34 
+ * @Last Modified by: chenxuan
+ * @Last Modified time: 2017-05-21 19:53:18
+ */
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Microsoft Yahei;
+    font-size: 14px;
+    overflow: hidden;
+    background-image: url('images/demo-1-bg.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+q:before,
+q:after {
+    content: '';
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?usbbgz');
+    src: url('fonts/icomoon.eot?usbbgz#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?usbbgz') format('truetype'), url('fonts/icomoon.woff?usbbgz') format('woff'), url('fonts/icomoon.svg?usbbgz#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    font-size: 4rem;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-newReg:before {
+    content: "\e901";
+    line-height: 6rem;
+}
+
+.icon-imgRename:before {
+    content: "\e900";
+    font-size: 5rem;
+    line-height: 5.8rem;
+}
+.icon-imgCompass:before {
+    content: "\e902";
+    font-size: 5.5rem;
+    line-height: 6.0rem;
+}
+
+/*menu*/
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.menu>ul {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.menu-li {
+    display: flex;
+    flex-direction: column;
+    width: 8rem;
+    height: 8rem;
+    background-color: rgba(99, 170, 222, .5);
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(11, 11, 22, .5);
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.menu-li>.brief {
+    line-height: 1.5rem;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.mt2 {
+    margin-top: 0.2rem;
+}
+
+.shinkIn {
+    opacity: 0;
+    transform: scale(0);
+    animation: shirk 2s forwards;
+}
+
+@keyframes shirk {
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

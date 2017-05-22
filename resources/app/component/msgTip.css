@@ -1,0 +1,51 @@
+/*
+ * @Author: chenxuan 
+ * @Date: 2017-05-21 00:33:42 
+ * @Last Modified by: chenxuan
+ * @Last Modified time: 2017-05-21 22:53:12
+ */
+
+body {
+    position: relative;
+    background-color:lightblue;
+}
+
+.tip {
+    top: 40px;
+}
+.tip {
+    position: absolute;
+    display: flex;
+    top: 40px;
+    left: 50%;
+    min-height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+    transform: translate(-50%, -300px);
+    opacity: 0;
+    animation: showout 5s forwards;
+    align-items: flex-start;
+}
+
+.tip>.text {
+    max-width: 600px;
+    padding: 0 10px;
+    font-family: Microsoft Yahei;
+    font-size: 14px;
+}
+
+@keyframes showout {
+    30% {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+    70% {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
